@@ -4,15 +4,12 @@
       <h1>{{msg}}</h1>
     </div>
 
-    <Row>
-
       <a href="https://www.baidu.com/" target="_blank">
         <img  alt="baidu" class="baidu-png" src="@/assets/baidu.png" ></a>
 
       <a href="https://www.y80s.net/" target="_blank">
         <img class="80-png" src="@/assets/80s.png" style="width:400px"></a>
 
-    </Row>
   </div>
 </template>
 
@@ -21,7 +18,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to my app'
     }
   }
 }
@@ -43,4 +40,9 @@ li {
 a {
   color: #42b983;
 }
+
+  .baidu-png {
+    width:300px;
+    height: 100px;
+  }
 </style>

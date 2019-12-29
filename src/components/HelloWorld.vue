@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div slot="header">
+    <div class='header' slot="header">
       <h1>{{msg}}</h1>
     </div>
 
@@ -10,6 +10,9 @@
       <a href="https://www.y80s.net/" target="_blank">
         <img class="80-png" src="@/assets/80s.png" style="width:400px"></a>
 
+    <div class="button">
+    <Button type="primary" ><h4>hello</h4></Button>
+    </div>
   </div>
 </template>
 
@@ -26,6 +29,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  Button:hover{
+    transform: rotate3d(10,20,30,30deg);
+    background-image: url(../assets/logo.png);
+    background-color: #2BAEB9;
+  }
+  .header{
+    text-shadow: 1px 2px 3px  red;
+  }
+  a{
+    position: relative;
+    -webkit-animation: move 5s infinite;
+    -webkit-animation-iteration-count: 1;
+  }
+  @-webkit-keyframes move {
+    from {top:0px}
+    to {top: 300px}
+  }
 h1, h2 {
   font-weight: normal;
 }

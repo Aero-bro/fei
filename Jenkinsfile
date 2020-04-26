@@ -9,7 +9,7 @@ pipeline{
         stage("npm-build "){
             steps{
                 sh "npm run build"
-                sh "
+                echo "构建完成"
             }
         }
         stage("docker push"){

@@ -8,6 +8,8 @@ pipeline{
         }
         stage("npm-build "){
             steps{
+              nodejs('nodejs'){
+              }
                 sh "npm run build"
                 echo "构建完成"
             }

@@ -11,6 +11,7 @@ pipeline{
             steps{
               nodejs('nodejs'){
               }
+                sh "npm install"
                 sh "npm run build"
                 echo "构建完成"
             }

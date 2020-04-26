@@ -1,17 +1,18 @@
 pipeline{
     agent any
     stages{
-        stage("get code"){
+        stage("git-clone"){
            steps{
-               echo "get code from scm"
+               sh "git clone https://github.com/Aero-bro/fei.git"
            }
         }
-        stage("package"){
+        stage("npm-build "){
             steps{
-                echo "packge code"
+                sh "npm run build"
+                sh "
             }
         }
-        stage("deploy"){
+        stage("docker push"){
             steps{
                 echo "deploy packge to node1"
             }

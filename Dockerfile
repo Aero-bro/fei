@@ -1,8 +1,13 @@
 # 设置基础镜像
 FROM nginx
+USER root
 # 定义作者
 MAINTAINER zhoufei <1498747727@qq.com>
 # 将dist文件中的内容复制到 /usr/share/nginx/html/ 这个目录下面
 COPY dist/  /usr/share/nginx/html/
 #用本地的 default.conf 配置来替换nginx镜像里的默认配置
 #COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+
+ARG dockerGid=999
+RUN echo "docker:x:${dockerGid}:jenkins" >> /etc/group
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers

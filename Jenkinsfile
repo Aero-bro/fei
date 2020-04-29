@@ -20,7 +20,7 @@ pipeline{
             steps{
                sh "docker -v"
                sh "docker build -t myapp:latest ."
-               sh "docker login --username=慈航普渡aero registry.cn-hangzhou.aliyuncs.com"
+               sh "docker login --username=慈航普渡aero --password=Zf666888? registry.cn-hangzhou.aliyuncs.com"
                sh "docker tag myapp:latest registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:latest"
                sh "docker push registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:latest"
                sh "docker pull registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:latest"

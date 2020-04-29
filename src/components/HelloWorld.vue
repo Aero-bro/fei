@@ -11,7 +11,7 @@
       <a href="https://www.y80s.net/" target="_blank">
         80s</a>
     </div>
-    <h1>慈航普渡</h1>
+    <h1>慈航普渡！</h1>
     <div class="button">
     <Button type="primary" @click="openCard"><h4>hello</h4></Button>
     </div>

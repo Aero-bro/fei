@@ -3,6 +3,7 @@ pipeline{
     stages{
         stage("git-clone"){
            steps{
+               sh "rm -rf fei"
                sh "git clone https://github.com/Aero-bro/fei.git"
            }
         }

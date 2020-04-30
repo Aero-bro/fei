@@ -23,7 +23,7 @@ pipeline{
                sh "docker login --username=慈航普渡aero --password=Zf666888? registry.cn-hangzhou.aliyuncs.com"
                sh "docker tag myapp registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp"
                sh "docker push registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp"
-               sh "docker-compose pull registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp && docker-compose up -d registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp"
+               sh "docker pull registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp && docker-compose up -d registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp"
             }
         }
     }

@@ -1,4 +1,4 @@
-version: '1.1' 
+version: '2' 
 services: 
  myapp: 
   image: registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp 

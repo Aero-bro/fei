@@ -21,8 +21,9 @@ pipeline{
                sh "docker -v"
                sh "docker build -t myapp ."
                sh "docker login --username=慈航普渡aero --password=Zf666888? registry.cn-hangzhou.aliyuncs.com"
-               sh "docker push myapp"
-               sh "docker-compose stop myapp && docker-compose pull myapp && docker-compose up -d myapp"
+               sh "docker tag myapp registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp"
+               sh "docker push registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp"
+               sh "docker-compose stop registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp && docker-compose pull registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp && docker-compose up -d registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:myapp"
             }
         }
     }

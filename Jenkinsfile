@@ -19,12 +19,10 @@ pipeline{
         stage("docker push"){
             steps{
                sh "docker -v"
-               sh "docker build -t myapp:latest ."
+               sh "docker build -t myapp ."
                sh "docker login --username=慈航普渡aero --password=Zf666888? registry.cn-hangzhou.aliyuncs.com"
-               sh "docker tag myapp:latest registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:latest"
-               sh "docker push registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:latest"
-               sh "docker pull registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:latest"
-               sh "docker run -d -p 8080:80 registry.cn-hangzhou.aliyuncs.com/aero_bro/fei:latest"
+               sh "docker push myapp"
+               sh "docker-compose stop myapp && docker-compose pull myapp && docker-compose up -d myapp"
             }
         }
     }

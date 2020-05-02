@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import iview from 'view-design'
 import 'view-design/dist/styles/iview.css'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+//使用axios库
+Vue.use(VueAxios,axios);
 
 var moment = require('moment');
 moment().format();

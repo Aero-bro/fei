@@ -33,6 +33,7 @@
   name: 'HelloWorld',
   data () {
     return {
+        userList:[],
       msg: 'Welcome to my app',
         time:'',
         modal1:false,
@@ -60,6 +61,13 @@
       console.log(self.time)
     },
     methods:{
+      init(){
+          let self = this;
+          this.axios.get("/api/test/userList").then(function (resp) {
+              self.userList = resp.data;
+              console.log(self.userList)
+          })
+      },
       openCard(){
           let self = this;
           self.modal1 = !self.modal1;
@@ -75,6 +83,7 @@
           setInterval(function () {
               self.curTime = moment.tz("Asia/Shanghai").format("YYYY-MM-DD HH:mm:ss");
               },1000);
+          self.init();
       },
     beforeDestroy() {
       let self = this;

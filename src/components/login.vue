@@ -60,6 +60,9 @@
       font-weight: bold;
       font-size: 14px;
     }
+    label.ivu-form-item-label {
+    color: #27384c;
+    }
     Button{
       border-radius: 20px;
     }
@@ -92,4 +95,10 @@
       background: transparent;
     }
   }
+  .userName.ivu-input-wrapper.ivu-input-wrapper-large.ivu-input-type-text {
+    width: auto;
+}
+.password.ivu-input-wrapper.ivu-input-wrapper-large.ivu-input-type-password {
+    width: auto;
+}
 </style>

@@ -56,7 +56,7 @@
     top: 300px;
     width: 1200px;
     .ivu-form-item-label{
-      color: #340d1d;
+      color: #222f3f;
       font-weight: bold;
       font-size: 14px;
     }
@@ -73,20 +73,20 @@
 
   }
   .userName{
-    width: auto;
     color: dodgerblue;
     border-radius: 30px;
     .ivu-input.ivu-input-large{
+      width: auto;
       border-radius: 20px;
       color:#340d1d;
       background: transparent;
     }
   }
-  .password{
-    width: auto;
+  .password{ 
     color: dodgerblue;
     border-radius: 30px;
     .ivu-input.ivu-input-large{
+      width: auto;
       border-radius: 20px;
       color:#340d1d;
       background: transparent;
